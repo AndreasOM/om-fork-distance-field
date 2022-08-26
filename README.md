@@ -1,5 +1,9 @@
 # distance-field
 
+## Warning:
+
+This is a temporary fork until a new upstream version is released against image>=0.24.2
+
 A Rust library/executable for generating distance field bitmaps to render as pseudo-vector images in a shader
 
  [![Build Status](https://travis-ci.org/tversteeg/distance-field.svg?branch=master)](https://travis-ci.org/tversteeg/distance-field) [![Cargo](https://img.shields.io/crates/v/distance-field.svg)](https://crates.io/crates/distance-field) [![License: GPL-3.0](https://img.shields.io/crates/l/distance-field.svg)](#license) [![Downloads](https://img.shields.io/crates/d/distance-field.svg)](#downloads)

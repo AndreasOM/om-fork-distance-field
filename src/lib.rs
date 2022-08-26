@@ -1,4 +1,4 @@
- #![crate_name = "distance_field"]
+ #![crate_name = "om_fork_distance_field"]
 
 extern crate image;
 extern crate spiral;
