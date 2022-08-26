@@ -1,21 +1,21 @@
 [package]
-name = "distance-field"
+name = "om-fork-distance-field"
 version = "0.2.1"
-authors = ["Thomas Versteeg <thomasversteeg@gmx.com>"]
+authors = ["Andreas Neukoetter <andreas@omni-mad.com>", "Thomas Versteeg <thomasversteeg@gmx.com>"]
 license = "GPL-3.0"
-homepage = "https://github.com/tversteeg/distance-field"
+homepage = "https://github.com/AndreasOM/om-fork-distance-field"
 edition = "2021"
 
 readme = "README.md"
-description = "Generate distance fields from images for pseudo-vector rendering"
+description = "Temporary fork! Generate distance fields from images for pseudo-vector rendering"
 documentation = "https://docs.rs/distance-field"
 
-repository = "https://github.com/tversteeg/distance-field.git"
+repository = "https://github.com/AndreasOM/om-fork-distance-field.git"
 keywords = ["image", "SDF", "gamedev", "vector"]
 categories = ["games", "rendering", "game-engines", "multimedia"]
 
 [badges]
-travis-ci = {repository = "tversteeg/distance-field"}
+# travis-ci = {repository = "tversteeg/distance-field"}
 
 [dependencies]
 spiral = "0.2.0"

@@ -25,6 +25,7 @@
 //!     convert_image_to_dfield("img/input.png", "output.png");
 //! }
 //! ```
+ #![crate_name = "om_fork_distance_field"]
 
 use bitvec::vec::BitVec;
 use image::{DynamicImage, ImageBuffer, Luma};
