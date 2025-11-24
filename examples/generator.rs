@@ -1,4 +1,4 @@
-use distance_field::DistanceFieldExt;
+use om_fork_distance_field::DistanceFieldExt;
 use docopt::Docopt;
 use image::{DynamicImage, GenericImageView};
 
@@ -27,7 +27,7 @@ fn main() {
         width, height
     );
 
-    let outbuf = img.grayscale().distance_field(distance_field::Options {
+    let outbuf = img.grayscale().distance_field(om_fork_distance_field::Options {
         max_distance: 256,
         size: (width, height),
         ..Default::default()

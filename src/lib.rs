@@ -3,16 +3,16 @@
 //!
 //! An example usecase for the library would be to automatically convert asset images. You can achieve this by having a `build.rs` similar to this:
 //!
-//! ```rust
+//! ```rust,no_run
 //! use std::fs::File;
-//! use distance_field::DistanceFieldExt;
+//! use om_fork_distance_field::DistanceFieldExt;
 //!
 //! fn convert_image_to_dfield(input: &str, output: &str) {
 //!     // Load the 'input' image
 //!     let img = image::open(input).unwrap();
 //!
 //!     // Generate a distance field from the image
-//!     let outbuf = img.grayscale().distance_field(distance_field::Options {
+//!     let outbuf = img.grayscale().distance_field(om_fork_distance_field::Options {
 //!         size: (128, 128),
 //!         max_distance: 256,
 //!         ..Default::default()

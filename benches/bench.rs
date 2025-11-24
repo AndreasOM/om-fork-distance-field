@@ -1,6 +1,6 @@
 use criterion::{criterion_group, criterion_main, Criterion};
 
-use distance_field::{DistanceFieldExt, Options};
+use om_fork_distance_field::{DistanceFieldExt, Options};
 use pprof::criterion::{Output, PProfProfiler};
 
 pub fn bench(c: &mut Criterion) {
