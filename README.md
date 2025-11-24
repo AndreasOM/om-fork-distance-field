@@ -2,7 +2,7 @@
 
 ## Warning:
 
-This is a temporary fork until a new upstream version is released against image>=0.24.2
+This is a temporary fork until a new upstream version is released against image>=0.25.9
 
 
 [![Build Status](https://github.com/tversteeg/distance-field/workflows/CI/badge.svg)](https://github.com/tversteeg/distance-field/actions?workflow=CI)
