@@ -1,6 +1,6 @@
 [package]
 name = "om-fork-distance-field"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["Andreas Neukoetter <andreas@omni-mad.com>", "Thomas Versteeg <thomasversteeg@gmx.com>"]
 edition = "2021"
 license = "GPL-3.0"
