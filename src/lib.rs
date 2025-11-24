@@ -1,4 +1,4 @@
- #![crate_name = "om_fork_distance_field"]
+#![crate_name = "om_fork_distance_field"]
 //! Generate distance field bitmaps for rendering as pseudo-vector images in shaders.
 //!
 //! An example usecase for the library would be to automatically convert asset images. You can achieve this by having a `build.rs` similar to this:
@@ -26,7 +26,6 @@
 //!     convert_image_to_dfield("img/input.png", "output.png");
 //! }
 //! ```
- #![crate_name = "om_fork_distance_field"]
 
 use bitvec::vec::BitVec;
 use image::{DynamicImage, ImageBuffer, Luma};
@@ -158,5 +157,5 @@ fn get_nearest_pixel_distance(
     };
 
     // Convert the 0.0-1.0 range to a u8
-    (distance_fraction * u8::max_value() as f32) as u8
+    (distance_fraction * u8::MAX as f32) as u8
 }
