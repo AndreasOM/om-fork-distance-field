@@ -1,0 +1,52 @@
+name: CI
+on:
+  push:
+    paths-ignore:
+      - "docs/**"
+      - "**.md"
+
+jobs:
+  # Check for formatting
+  rustfmt:
+    name: Formatter check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          components: rustfmt
+          override: true
+
+      - run: rustup component add rustfmt
+      - uses: actions-rs/cargo@v1
+        with:
+          command: fmt
+          args: --all -- --check
+
+  # Run test check on Linux, macOS, and Windows
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the branch being tested
+      - uses: actions/checkout@v4
+
+      # Install rust stable
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: stable
+
+      # Cache the built dependencies
+      - uses: Swatinem/rust-cache@v2.7.3
+        with:
+          save-if: ${{ github.event_name == 'push' }}
+
+      # Install cargo-hack
+      - uses: taiki-e/install-action@cargo-hack
+
+      # Test all feature combinations on the target platform
+      - name: Test
+        run: cargo hack --each-feature test

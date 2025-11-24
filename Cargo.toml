@@ -1,6 +1,6 @@
 [package]
 name = "om-fork-distance-field"
-version = "0.1.8"
+version = "0.2.1"
 authors = ["Andreas Neukoetter <andreas@omni-mad.com>", "Thomas Versteeg <thomasversteeg@gmx.com>"]
 license = "GPL-3.0"
 homepage = "https://github.com/AndreasOM/om-fork-distance-field"
@@ -17,12 +17,19 @@ categories = ["games", "rendering", "game-engines", "multimedia"]
 # travis-ci = {repository = "tversteeg/distance-field"}
 
 [dependencies]
-spiral = "0.1.9"
-image = "0.24.2"
+spiral = "0.2.0"
+image = "0.24.8"
+bitvec = "1.0.1"
+
+[dev-dependencies]
+pprof = { version = "0.13.0", features = ["flamegraph", "criterion"] }
+criterion = { version = "0.5.1", default-features = false }
+docopt = "1.1.1"
 
 [[example]]
 name = "generator"
 path = "examples/generator.rs"
 
-[dev-dependencies]
-docopt = "1.1.1"
+[[bench]]
+name = "bench"
+harness = false

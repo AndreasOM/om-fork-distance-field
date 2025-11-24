@@ -1,7 +1,3 @@
-extern crate distance_field;
-extern crate docopt;
-extern crate image;
-
 use distance_field::DistanceFieldExt;
 use docopt::Docopt;
 use image::{DynamicImage, GenericImageView};
@@ -24,8 +20,8 @@ fn main() {
 
     println!("Loaded image with size {:?}", img.dimensions());
 
-    let width = args.get_str("<width>").parse::<u32>().unwrap();
-    let height = args.get_str("<height>").parse::<u32>().unwrap();
+    let width = args.get_str("<width>").parse::<usize>().unwrap();
+    let height = args.get_str("<height>").parse::<usize>().unwrap();
     println!(
         "Converting image to distance field image with size ({:?}, {:?})...",
         width, height
@@ -33,6 +29,7 @@ fn main() {
 
     let outbuf = img.grayscale().distance_field(distance_field::Options {
         max_distance: 256,
+        size: (width, height),
         ..Default::default()
     });
 
