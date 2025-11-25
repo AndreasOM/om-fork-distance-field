@@ -1,6 +1,6 @@
 [package]
 name = "om-fork-distance-field"
-version = "0.2.2"
+version = "0.3.0-alpha"
 authors = ["Andreas Neukoetter <andreas@omni-mad.com>", "Thomas Versteeg <thomasversteeg@gmx.com>"]
 edition = "2021"
 license = "GPL-3.0"
@@ -19,13 +19,14 @@ categories = ["games", "rendering", "game-engines", "multimedia"]
 
 [dependencies]
 spiral = "0.2.0"
-image = "0.25.9"
+image = { version = "0.25.9", default-features = false }
 bitvec = "1.0.1"
 
 [dev-dependencies]
 pprof = { version = "0.13.0", features = ["flamegraph", "criterion"] }
 criterion = { version = "0.5.1", default-features = false }
 docopt = "1.1.1"
+image = { version = "0.25.9", default-features = false, features = ["png"] }
 
 [[example]]
 name = "generator"
